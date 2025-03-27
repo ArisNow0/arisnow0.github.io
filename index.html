@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArisNow - Программист и 3D художник</title>
+    <title>ArisNow - Fullstack разработчик и 3D художник</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="/images/logo/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/logo/favicon.svg" />
+<link rel="shortcut icon" href="/images/logo/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="ArisNow" />
+<link rel="manifest" href="/images/logo/site.webmanifest" />
 </head>
 <body>
     <header>
@@ -15,7 +21,7 @@
                 <ul>
                     <li><a href="index.html" class="active">Главная</a></li>
                     <li><a href="portfolio.html">Портфолио</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                    <li><a class="cont" href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,12 +32,15 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Привет, я ArisNow</h1>
-                    <h2>Программист и 3D художник</h2>
-                    <p>Создаю инновационные решения на стыке технологий и искусства. Специализируюсь на C++, Python, JavaScript, а также 3D моделировании и анимации.</p>
-                    <a href="portfolio.html" class="btn">Мои работы</a>
+                    <h2>Fullstack разработчик и 3D художник</h2>
+                    <p>Создаю сложные программные решения и 3D графику. Люблю совмещать технические навыки с творческими подходами. Готов взяться за интересные проекты!</p>
+                    <div class="cta-buttons">
+                        <a href="portfolio.html" class="btn">Мои работы</a>
+                        <a href="#contacts" class="btn secondary">Связаться</a>
+                    </div>
                 </div>
                 <div class="hero-image">
-                    <img src="images/arisnow-avatar.jpg" alt="ArisNow">
+                    <img src="images/ArisNow0.png" alt="ArisNow" class="avatar">
                 </div>
             </div>
         </div>
@@ -44,22 +53,42 @@
                 <div class="skill-card">
                     <i class="fas fa-code"></i>
                     <h3>Программирование</h3>
-                    <p>C++, Python, JavaScript, HTML/CSS, React, Node.js</p>
+                    <ul>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                    </ul>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-cube"></i>
-                    <h3>3D Моделирование</h3>
-                    <p>Blender, Maya, ZBrush, Substance Painter</p>
+                    <h3>3D Графика</h3>
+                    <ul>
+                        <li>Blender</li>
+                        <li>Моделирование</li>
+                        <li>Анимация</li>
+                        <li>Текстурирование</li>
+                    </ul>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-film"></i>
-                    <h3>Анимация</h3>
-                    <p>Ключевая анимация, риггинг, симуляции</p>
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Инструменты</h3>
+                    <ul>
+                        <li>Visual Studio Code</li>
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>PostgreSQL</li>
+                    </ul>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-globe"></i>
                     <h3>Веб-разработка</h3>
-                    <p>Полный цикл создания современных веб-сайтов</p>
+                    <ul>
+                        <li>Frontend</li>
+                        <li>Backend</li>
+                        <li>Fullstack</li>
+                        <li>React/Node.js</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -69,30 +98,39 @@
         <div class="container">
             <h2>Обо мне</h2>
             <div class="about-content">
-                <p>Я профессиональный разработчик с более чем 5-летним опытом работы в различных областях IT. Моя страсть к технологиям сочетается с художественным видением, что позволяет мне создавать уникальные проекты.</p>
-                <p>В свободное время я люблю экспериментировать с новыми технологиями, участвовать в game jams и создавать open-source проекты.</p>
+                <p>Я fullstack разработчик с опытом работы в различных областях программирования. Основатель студии <strong>CatBios</strong>. Работаю с C++, Java, JavaScript, Python и веб-технологиями.</p>
+                <p>Параллельно занимаюсь 3D графикой в Blender. Люблю сложные технические задачи и творческие проекты.</p>
+                <p>Готов взяться за любой проект - от сложных систем до простых скриптов. Если идея интересная, могу работать бесплатно!</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Свяжитесь со мной</h2>
-            <div class="contact-content">
-                <form class="contact-form">
-                    <input type="text" placeholder="Ваше имя" required>
-                    <input type="email" placeholder="Ваш email" required>
-                    <textarea placeholder="Ваше сообщение" required></textarea>
-                    <button type="submit" class="btn">Отправить</button>
-                </form>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> contact@arisnow.com</p>
-                    <p><i class="fas fa-phone"></i> +7 (123) 456-78-90</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-artstation"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+    <section id="contacts" class="contacts">
+        <div class="container2">
+            <h2>Как связаться</h2>
+            <div class="contacts-content">
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <a href="mailto:cat.bios.studio@gmail.com">cat.bios.studio@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Телефон</h3>
+                        <a href="tel:+380688700227">+380 68 870 0227</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-discord"></i>
+                        <h3>Discord</h3>
+                        <span>@arisnow0</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h3>Я в соцсетях</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/ArisNow0" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.twitch.tv/arisnow0" class="social-icon"><i class="fab fa-twitch"></i></a>
                     </div>
                 </div>
             </div>
@@ -101,7 +139,9 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 ArisNow. Все права защищены.</p>
+            <div class="footer-content">
+                <div class="footer-copy">&copy; 2025 ArisNow. Все права не защищены.</div>
+            </div>
         </div>
     </footer>
 

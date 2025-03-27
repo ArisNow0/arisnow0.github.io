@@ -6,6 +6,12 @@
     <title>Портфолио ArisNow</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="/images/logo/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/logo/favicon.svg" />
+<link rel="shortcut icon" href="/images/logo/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="ArisNow" />
+<link rel="manifest" href="/images/logo/site.webmanifest" />
 </head>
 <body>
     <header>
@@ -15,7 +21,7 @@
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="portfolio.html" class="active">Портфолио</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                    <li><a class="cont" href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -23,91 +29,116 @@
 
     <section class="portfolio-header">
         <div class="container">
-            <h1>Мои работы</h1>
-            <p>Здесь представлены некоторые из моих проектов в области программирования и 3D графики.</p>
+            <h1>Мои проекты</h1>
+            <p>Вот некоторые из моих работ в программировании и 3D графике</p>
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="projects">
         <div class="container">
-            <div class="portfolio-filter">
-                <button class="active" data-filter="all">Все работы</button>
-                <button data-filter="programming">Программирование</button>
-                <button data-filter="3d">3D Графика</button>
-                <button data-filter="web">Веб-разработка</button>
+            <!-- GadgetSale -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>GadgetSale</h2>
+                    <span class="project-status closed">Закрытый</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="images/gadgetsale.png" alt="GadgetSale">
+                    </div>
+                    <div class="project-info">
+                        <h3>Онлайн магазин электроники</h3>
+                        <p>Полнофункциональный интернет-магазин с системой рекомендаций, корзиной покупок и личным кабинетом.</p>
+                        <div class="project-tech">
+                            <h4>Использованные технологии:</h4>
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>PostgreSQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="programming">
-                    <img src="images/project1.jpg" alt="Проект 1">
-                    <div class="portfolio-overlay">
-                        <h3>Игровой движок на C++</h3>
-                        <p>Собственный игровой движок с поддержкой Vulkan API</p>
-                        <a href="#" class="btn">Подробнее</a>
+            <!-- ShellChain -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>ShellChain</h2>
+                    <span class="project-status in-dev">В разработке</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="images/shellchain.png" alt="ShellChain">
+                    </div>
+                    <div class="project-info">
+                        <h3>Minecraft сервер</h3>
+                        <p>Уникальный игровой сервер с собственным сюжетом и механиками.</p>
+                        <div class="project-tech">
+                            <h4>Использованные технологии:</h4>
+                            <ul>
+                                <li>Java</li>
+                                <li>Fabric API</li>
+                                <li>JavaScript</li>
+                                <li>MySQL</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="3d">
-                    <img src="images/project2.jpg" alt="Проект 2">
-                    <div class="portfolio-overlay">
-                        <h3>3D персонаж для игры</h3>
-                        <p>Полный цикл от концепта до анимированного персонажа</p>
-                        <a href="#" class="btn">Подробнее</a>
-                    </div>
+            </div>
+
+            <!-- CatBios Launcher -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>CatBios Launcher</h2>
+                    <span class="project-status in-dev">В разработке</span>
                 </div>
-                <div class="portfolio-item" data-category="web">
-                    <img src="images/project3.jpg" alt="Проект 3">
-                    <div class="portfolio-overlay">
-                        <h3>Интерактивное веб-приложение</h3>
-                        <p>React + Node.js приложение для визуализации данных</p>
-                        <a href="#" class="btn">Подробнее</a>
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="images/catbios_lan.png" alt="CatBios Launcher">
                     </div>
-                </div>
-                <div class="portfolio-item" data-category="programming">
-                    <img src="images/project1.jpg" alt="Проект 4">
-                    <div class="portfolio-overlay">
-                        <h3>Python библиотека для ML</h3>
-                        <p>Библиотека для обработки естественного языка</p>
-                        <a href="#" class="btn">Подробнее</a>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="3d">
-                    <img src="images/project2.jpg" alt="Проект 5">
-                    <div class="portfolio-overlay">
-                        <h3>Короткометражный анимационный фильм</h3>
-                        <p>Полный цикл производства 3D анимации</p>
-                        <a href="#" class="btn">Подробнее</a>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="web">
-                    <img src="images/project3.jpg" alt="Проект 6">
-                    <div class="portfolio-overlay">
-                        <h3>Портфолио сайт для художника</h3>
-                        <p>Адаптивный сайт с галереей работ</p>
-                        <a href="#" class="btn">Подробнее</a>
+                    <div class="project-info">
+                        <h3>Игровой лаунчер</h3>
+                        <p>Кастомизированный лаунчер для игр с системой автоматических обновлений.</p>
+                        <div class="project-tech">
+                            <h4>Использованные технологии:</h4>
+                            <ul>
+                                <li>C++</li>
+                                <li>Python</li>
+                                <li>Qt Framework</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contacts" class="contacts">
         <div class="container">
-            <h2>Готовы к сотрудничеству?</h2>
-            <div class="contact-content">
-                <form class="contact-form">
-                    <input type="text" placeholder="Ваше имя" required>
-                    <input type="email" placeholder="Ваш email" required>
-                    <textarea placeholder="Расскажите о вашем проекте" required></textarea>
-                    <button type="submit" class="btn">Отправить</button>
-                </form>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> contact@arisnow.com</p>
-                    <p><i class="fas fa-phone"></i> +7 (123) 456-78-90</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-artstation"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+            <h2>Как связаться</h2>
+            <div class="contacts-content">
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <a href="mailto:cat.bios.studio@gmail.com">cat.bios.studio@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Телефон</h3>
+                        <a href="tel:+380688700227">+380 68 870 0227</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-discord"></i>
+                        <h3>Discord</h3>
+                        <span>@arisnow0</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h3>Я в соцсетях</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/ArisNow0" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.twitch.tv/arisnow0" class="social-icon"><i class="fab fa-twitch"></i></a>
                     </div>
                 </div>
             </div>
@@ -116,7 +147,9 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 ArisNow. Все права защищены.</p>
+            <div class="footer-content">
+                <div class="footer-copy">&copy; 2025 ArisNow. Все права не защищены.</div>
+            </div>
         </div>
     </footer>
 

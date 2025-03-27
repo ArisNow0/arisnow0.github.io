@@ -1,29 +1,4 @@
-// Фильтрация портфолио
 document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.portfolio-filter button');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    
-    if (filterButtons.length > 0) {
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Удаляем активный класс у всех кнопок
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Добавляем активный класс текущей кнопке
-                this.classList.add('active');
-                
-                const filterValue = this.getAttribute('data-filter');
-                
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-    }
-    
     // Плавная прокрутка для якорных ссылок
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -52,15 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Обработка формы
-    const contactForms = document.querySelectorAll('.contact-form');
-    contactForms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Здесь можно добавить AJAX отправку формы
-            alert('Спасибо за ваше сообщение! Я свяжусь с вами в ближайшее время.');
-            this.reset();
+    // Таймер "лет опыта"
+    function updateExperience() {
+        const startYear = 2020;
+        const currentYear = new Date().getFullYear();
+        const experience = currentYear - startYear;
+        document.querySelectorAll('.experience-years').forEach(el => {
+            el.textContent = experience;
         });
-    });
+    }
+    
+    updateExperience();
+    setInterval(updateExperience, 1000 * 60 * 60 * 24);
 });
