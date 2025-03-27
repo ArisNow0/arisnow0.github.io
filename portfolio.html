@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио ArisNow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">ArisNow</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="portfolio.html" class="active">Портфолио</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="portfolio-header">
+        <div class="container">
+            <h1>Мои работы</h1>
+            <p>Здесь представлены некоторые из моих проектов в области программирования и 3D графики.</p>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio-filter">
+                <button class="active" data-filter="all">Все работы</button>
+                <button data-filter="programming">Программирование</button>
+                <button data-filter="3d">3D Графика</button>
+                <button data-filter="web">Веб-разработка</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="programming">
+                    <img src="images/project1.jpg" alt="Проект 1">
+                    <div class="portfolio-overlay">
+                        <h3>Игровой движок на C++</h3>
+                        <p>Собственный игровой движок с поддержкой Vulkan API</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="3d">
+                    <img src="images/project2.jpg" alt="Проект 2">
+                    <div class="portfolio-overlay">
+                        <h3>3D персонаж для игры</h3>
+                        <p>Полный цикл от концепта до анимированного персонажа</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img src="images/project3.jpg" alt="Проект 3">
+                    <div class="portfolio-overlay">
+                        <h3>Интерактивное веб-приложение</h3>
+                        <p>React + Node.js приложение для визуализации данных</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="programming">
+                    <img src="images/project1.jpg" alt="Проект 4">
+                    <div class="portfolio-overlay">
+                        <h3>Python библиотека для ML</h3>
+                        <p>Библиотека для обработки естественного языка</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="3d">
+                    <img src="images/project2.jpg" alt="Проект 5">
+                    <div class="portfolio-overlay">
+                        <h3>Короткометражный анимационный фильм</h3>
+                        <p>Полный цикл производства 3D анимации</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img src="images/project3.jpg" alt="Проект 6">
+                    <div class="portfolio-overlay">
+                        <h3>Портфолио сайт для художника</h3>
+                        <p>Адаптивный сайт с галереей работ</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Готовы к сотрудничеству?</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Ваш email" required>
+                    <textarea placeholder="Расскажите о вашем проекте" required></textarea>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> contact@arisnow.com</p>
+                    <p><i class="fas fa-phone"></i> +7 (123) 456-78-90</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-artstation"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 ArisNow. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
