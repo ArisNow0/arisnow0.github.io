@@ -13,6 +13,7 @@
 }
 
 body {
+    overflow: hidden;
     font-family: 'Space Grotesk', sans-serif;
     color: var(--light);
     background-color: var(--dark);
@@ -28,13 +29,217 @@ body {
     z-index: -1;
 }
 
-.glass-panel {
-    background: rgba(255, 255, 255, 0.15);
+  .glass-panel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .glass-triangle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.062);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 0; /* или любое число ниже текста */
+    transition: transform 1s ease;
+  }
+
+.about {
+    width: 80%; 
+    height: 80vh; 
+    position: relative; 
+    margin: 50px auto; 
+    animation: float 6s ease-in-out infinite;
+}
+.about-me {
+  width: 100%;
+  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+        overflow: hidden;
+}
+
+.about-content {
+  width: 100%;
+ z-index: 10;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.logo-container {
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-logo {
+  width: 25vb;
+  height: 25vb;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.text-content {
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.name-title {
+  font-size: 5vb;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-title {
+  font-size: 1.8vb;
+  margin-bottom: 25px;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+
+/* Секция навыков */
+.skills {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--dark-color);
+}
+
+.skills-grid {
+    z-index: 1;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background: rgba(194, 214, 210, 0.199);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-20px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.skill-card:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card i {
+    font-size: 7vb;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+        color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black,
+    0 0 5px black;
+}
+
+.skill-card h3 {
+    font-size: 2.5vb;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black,
+    0 0 5px black;
+}
+
+.skill-card ul {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.skill-card li {
+    margin-bottom: 8px;
+    font-size: 2vb;
+    position: relative;
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black,
+    0 0 5px black;
+}
+.description  {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.description p {
+  font-size: 2.2vb;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black,
+    0 0 5px black;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .profile-logo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .name-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+.main {
+    width: 100%; 
+    height: 100vh; 
+    position: relative; 
+    margin: 0px auto; 
+    overflow: hidden;
 }
 
 .header {
@@ -54,6 +259,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .logo {
