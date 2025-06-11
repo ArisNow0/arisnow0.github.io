@@ -215,7 +215,7 @@ const panel = document.querySelector('.glass-panel');
 const W = panel.clientWidth;
 const H = panel.clientHeight;
 
-const pointsCount = 40 + Math.floor(Math.random() * 21);
+const pointsCount = 40 + Math.floor(Math.random() * 10);
 const points = [];
 points.push([0, 0]);
 points.push([W, 0]);
