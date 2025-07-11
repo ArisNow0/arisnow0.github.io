@@ -464,6 +464,8 @@ body {
 }
 
 @media (max-width: 425px) {
+    .body {overflow: scroll;}
+    .main {margin: -25px auto;}
 
     .skills-slider {
         z-index: 10;
