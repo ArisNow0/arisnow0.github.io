@@ -1,9 +1,10 @@
 const translations = {
     en: {
+        title: "ArisNow | Portfolio",
         nav: {
-            home: "Home",
+            home: "Main",
             portfolio: "Portfolio",
-            contacts: "Contacts"
+            contacts: "Contact"
         },
         buttons: {
             more: "More",
@@ -14,8 +15,7 @@ const translations = {
         modal: {
             usedTech: "Used technologies:"
         },
-        card: [
-            {
+        card: [{
                 title: "3D Models and Animations",
                 description: "Here are my works with 3D models, animations and visualization."
             },
@@ -37,6 +37,7 @@ const translations = {
         ]
     },
     ru: {
+        title: "ArisNow | Портфолио",
         nav: {
             home: "Главная",
             portfolio: "Портфолио",
@@ -51,8 +52,7 @@ const translations = {
         modal: {
             usedTech: "Используемые технологии:"
         },
-        card: [
-            {
+        card: [{
                 title: "3D Модели и Анимации",
                 description: "Здесь собраны мои работы с 3D-моделями, анимациями и визуализацией."
             },
@@ -74,6 +74,7 @@ const translations = {
         ]
     },
     ua: {
+        title: "ArisNow | Портфоліо",
         nav: {
             home: "Головна",
             portfolio: "Портфоліо",
@@ -88,8 +89,7 @@ const translations = {
         modal: {
             usedTech: "Використані технології:"
         },
-        card: [
-            {
+        card: [{
                 title: "3D Моделі та Анімації",
                 description: "Тут зібрані мої роботи з 3D-моделями, анімаціями та візуалізацією."
             },
@@ -124,20 +124,19 @@ function setLanguage(lang) {
     if (currentFlagImg && flagUrls[lang]) {
         currentFlagImg.src = flagUrls[lang];
     }
+
+    document.title = translations[lang].title;
     document.querySelector('a.tab[href="index.html"]').textContent = t.nav.home;
     document.querySelector('a.tab[href="portfolio.html"]').textContent = t.nav.portfolio;
     document.querySelector('a.tab[href="#"]').textContent = t.nav.contacts;
 
-    // Кнопки
     document.querySelectorAll('.text-card-button').forEach(btn => btn.textContent = t.buttons.more);
     document.getElementById('modal-link').textContent = t.buttons.visitSite;
     document.querySelectorAll('.close-button').forEach(btn => btn.textContent = t.buttons.close);
     document.querySelector('.visit-button[href*="animations"]').textContent = t.buttons.seeAll;
 
-    // Модал
     document.getElementById('modal-tools').previousElementSibling.textContent = t.modal.usedTech;
 
-    // Карточки
     const cards = document.querySelectorAll('.portfolio-card');
     cards.forEach((card, index) => {
         const data = t.card[index];
@@ -148,7 +147,6 @@ function setLanguage(lang) {
         if (data.tools) card.dataset.tools = data.tools;
     });
 
-    // Анимация модал
     document.getElementById('modal-titleAn').textContent = t.card[0].title;
     document.getElementById('modal-descriptionAn').textContent = t.card[0].description;
 

@@ -1,5 +1,6 @@
 const translations = {
     ru: {
+        title: "ArisNow | Главная",
         home: "Главная",
         portfolio: "Портфолио",
         contact: "Контакты",
@@ -23,7 +24,8 @@ const translations = {
         scroll: "Прокрутите вниз"
     },
     en: {
-        home: "Home",
+        title: "ArisNow | Main",
+        home: "Main",
         portfolio: "Portfolio",
         contact: "Contact",
         name: "ArisNow0",
@@ -46,6 +48,7 @@ const translations = {
         scroll: "Scroll down"
     },
     ua: {
+        title: "ArisNow | Головна",
         home: "Головна",
         portfolio: "Портфоліо",
         contact: "Контакти",
