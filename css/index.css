@@ -340,7 +340,7 @@ body {
 .flags {
     position: absolute;
     top: 60px;
-    left: 0;
+    left: -4px;
     background: white;
     border: 1px solid #ccc;
     border-radius: 5px;

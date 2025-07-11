@@ -47,7 +47,7 @@
     <section class="main">
         <div class="portfolio-container">
             <div class="portfolio-scroll">
-                <div class="portfolio-card">
+                <div class="portfolio-card" id="Animation" data-title="3D Модели и Анимации" data-description="Здесь собраны мои работы с 3D-моделями, анимациями и визуализацией.">
                     <img src="image/Animation.png" alt="Project 1" class="card-image">
                     <div class="card-overlay">
                         <span class="card-title">3D Модели и Анимации</span>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
 
-<div class="portfolio-card" data-title="GadgetSale(Preview Version)"
+<div class="portfolio-card" data-title="GadgetSale (Preview Version)"
      data-description="Онлайн-магазин был разработан за два месяца. В нем реализованы функции онлайн-оплаты через сервис Wayforpay, отображение актуального количества товаров в реальном времени, а также интеграция карты для выбора отделения почты при оформлении заказа. После оформления заказ автоматически отправлялся на электронную почту покупателя и магазина для дальнейшей обработки и отправки товара."
      data-tools="HTML, CSS, JavaScript, PHP, Сервис Leaflet, Сервис Wayforpay"
      data-link="https://arisnow0.github.io/GadgetSale-Preview/">
@@ -99,7 +99,16 @@
         <button class="close-button">Закрыть</button>
     </div>
 </div>
+<div id="animation-modal" class="glass-modal hidden">
+    <div class="modal-content animation-style">
+        <h2 id="modal-titleAn"></h2>
+        <p id="modal-descriptionAn"></p>
+<a href="https://example.com/all-animations" target="_blank" class="visit-button" style="font-size: 2rem;">Увидеть Всё</a>
+        <button class="close-button">Закрыть</button>
+    </div>
+</div>
     <script src="js/portfolio.js"></script>
+    <script src="js/portfolio_lang.js"></script>
 </body>
 
 </html>

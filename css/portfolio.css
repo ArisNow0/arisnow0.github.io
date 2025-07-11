@@ -100,7 +100,7 @@ body {
 .flags {
     position: absolute;
     top: 60px;
-    left: 0;
+    left: -4px;
     background: white;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -429,7 +429,9 @@ body {
 
 @media (max-width: 425px) {
     .body {overflow: scroll;}
-    .modal-content p {font-size: 0.9rem; }
+    .modal-content p {font-size: 1.6vb; }
+    .modal-content h2 { font-size: 2.8vb;
+    }
     .card-button{
         position: absolute;
         font-size: 0;
