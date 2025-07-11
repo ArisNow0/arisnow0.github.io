@@ -477,7 +477,8 @@ body {
 
     .skill-card {
         height: 225px;
-        width: 150px;
+        min-width: 175px;
+        max-width: 175px;
         box-sizing: border-box;
 
     }

@@ -447,15 +447,17 @@ function initGlassTele() {
 const skillsGrid = document.getElementById('skillsGrid');
 const slider = document.querySelector('.skills-slider');
 const buttons = document.querySelectorAll('.button-card');
+const skillCards = slider.querySelectorAll('.skill-card');
 const gap = 30;
 
 buttons.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-        const sliderWidth = slider.offsetWidth;
-        const offset = index * (sliderWidth + gap);
+        const cardWidth = skillCards[0].offsetWidth;
+        const offset = index * (cardWidth + gap); 
         skillsGrid.style.transform = `translateX(-${offset}px)`;
     });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

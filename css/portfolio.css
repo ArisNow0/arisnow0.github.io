@@ -167,7 +167,7 @@ body {
 
 .portfolio-container {
   width: 80%;
-  margin: 40px auto;
+  margin: 100px auto 20px;
   overflow-x: auto;
 }
 
@@ -343,6 +343,7 @@ body {
 }
 
 .visit-button {
+    pointer-events: auto;
     height: 100%;
     color: #ffffff;
     padding: 10px 20px;
@@ -358,6 +359,7 @@ body {
 }
 
 .close-button {
+    pointer-events: auto;
     height: 100%;
     color: #ffffff;
     padding: 10px 20px;
@@ -383,7 +385,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Анимация появления */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -393,7 +394,6 @@ body {
     display: none;
 }
 
-/* Дополнительные стили для улучшения читаемости */
 #modal-tools {
     display: inline-block;
     background: rgba(255, 255, 255, 0.1);
@@ -405,6 +405,7 @@ body {
 .modal-content a {
     text-decoration: none;
 }
+
 
 @media (max-width: 1200px) {
     
@@ -427,6 +428,19 @@ body {
 }
 
 @media (max-width: 425px) {
+    .body {overflow: scroll;}
+    .modal-content p {font-size: 0.9rem; }
+    .card-button{
+        position: absolute;
+        font-size: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+    .card-title {font-size: 4vb;}
+    .portfolio-card {
+    max-height: 150px;
+    }
 
     .logo-container {
         display: none;

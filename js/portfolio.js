@@ -5,25 +5,44 @@ function resizeCanvas() {
     canvas.width = document.documentElement.scrollWidth;
     canvas.height = document.documentElement.scrollHeight;
 }
-
+window.addEventListener('resize', () => {
+  resizeCanvas();
+});
 resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
 
 document.querySelectorAll('.card-button').forEach(button => {
     button.addEventListener('click', () => {
         const card = button.closest('.portfolio-card');
-        document.getElementById('modal-title').textContent = card.dataset.title;
-        document.getElementById('modal-description').textContent = card.dataset.description;
-        document.getElementById('modal-tools').textContent = card.dataset.tools;
-        document.getElementById('modal-link').href = card.dataset.link;
 
-        document.getElementById('glass-panel').classList.remove('hidden');
+        if (card.id === 'Animation') {
+            document.getElementById('animation-modal').classList.remove('hidden');
+            document.getElementById('modal-titleAn').textContent = card.dataset.title;
+            document.getElementById('modal-descriptionAn').textContent = card.dataset.description;
+        } else {
+            document.getElementById('modal-title').textContent = card.dataset.title;
+            document.getElementById('modal-description').textContent = card.dataset.description;
+            document.getElementById('modal-tools').textContent = card.dataset.tools;
+            document.getElementById('modal-link').href = card.dataset.link;
+            document.getElementById('glass-panel').classList.remove('hidden');
+        }
     });
 });
 
-document.querySelector('.close-button').addEventListener('click', () => {
-    document.getElementById('glass-panel').classList.add('hidden');
+document.querySelectorAll('.close-button').forEach(button => {
+    button.addEventListener('click', () => {
+        document.getElementById('glass-panel').classList.add('hidden');
+        document.getElementById('animation-modal').classList.add('hidden');
+    });
 });
+
+document.querySelectorAll('.glass-modal').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+});
+
 
 class Particle {
   constructor() {
@@ -38,7 +57,6 @@ class Particle {
     this.x += this.vx;
     this.y += this.vy;
 
-    // Отражение от краев
     if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
     if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
   }
@@ -85,7 +103,6 @@ function connectParticles() {
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Черный фон
   ctx.fillStyle = 'black';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
