@@ -100,7 +100,7 @@ function setLanguage(lang) {
         p.textContent = line;
         desc.appendChild(p);
     });
-
+    document.title = translations[lang].title;
     document.querySelector("#card3 h3").textContent = t.skills.programming;
     document.querySelector("#card2 h3").textContent = t.skills.graphics.title;
     const listItems = document.querySelectorAll("#card2 li");
