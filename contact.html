@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArisNow | Contact</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" type="image/png" href="/image/icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/image/icon/favicon.svg" />
+    <link rel="shortcut icon" href="/image/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/icon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ArisNow" />
+    <link rel="manifest" href="/image/icon/site.webmanifest" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="life" style="position: fixed; inset: 0; z-index: -1;"></canvas>
+    <header class="header">
+        <div class="logo">
+            <img src="image/ArisNow_NoBack.png" alt="ArisNow0 Logo" class="logo-header">
+            <a>ArisNow</a>
+        </div>
+        <nav class="tabs">
+            <a href="index.html" class="tab" data-icon="fa-home">Главная</a>
+            <a href="portfolio.html" class="tab" data-icon="fa-briefcase">Портфолио</a>
+            <a href="contact.html" class="tab active" data-icon="fa-headphones">Контакты</a>
+            <div class="lang-switcher" id="lang-switcher">
+                <div class="flag" id="current-flag"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="Current Language"></div>
+                <div class="flags">
+                    <div class="flagd" data-lang="en">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Flag_of_the_United_States_%28Pantone%29.svg" alt="English">
+                    </div>
+                    <div class="flagd" data-lang="ru">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png" alt="Russian">
+                    </div>
+                    <div class="flagd" data-lang="ua">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="Ukraine">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="main">
+        <div class="glass-panel">
+            <div class="secheader">
+                <h1>ArisNow</h1>
+                <p>Свяжитесь со мной удобным способом</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-address-card"></i>
+                    <h2>Контакты</h2>
+                </div>
+                <div class="contacts-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">Телефон</div>
+                            <div class="contact-value"><a href="tel:+380974627358">+380633340251</a></div>
+                            <div class="note">Лучше писать в Telegram</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">Email</div>
+                            <div class="contact-value"><a href="mailto:arisnow001@gmail.com">arisnow001@gmail.com</a></div>
+                            <div class="note">Лучше писать в Telegram</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">Telegram</div>
+                            <div class="contact-value">
+                                <a href="https://t.me/ArisNow" target="_blank">@ArisNow</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">Discord</div>
+                            <div class="contact-value">@arisnow0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-share-alt"></i>
+                    <h2>Социальные сети</h2>
+                </div>
+                <div class="social-grid">
+                    <div class="social-card">
+                        <div class="social-icon">
+                            <i class="fab fa-steam"></i>
+                        </div>
+                        <div class="social-info">
+                            <div class="social-name">Steam</div>
+                            <div class="social-link">
+                                <a href="https://steamcommunity.com/id/ArisNow0/" target="_blank">ArisNow0</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-card">
+                        <div class="social-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="social-info">
+                            <div class="social-name">Telegram канал</div>
+                            <div class="social-link">
+                                <a href="https://t.me/this_is_render_in_blender" target="_blank">Render in Blender</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-card">
+                        <div class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="social-info">
+                            <div class="social-name">GitHub</div>
+                            <div class="social-link">
+                                <a href="https://github.com/ArisNow0" target="_blank">ArisNow0</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-card">
+                        <div class="social-icon">
+                            <i class="fab fa-twitch"></i>
+                        </div>
+                        <div class="social-info">
+                            <div class="social-name">Twitch</div>
+                            <div class="social-link">
+                                <a href="https://www.twitch.tv/arisnow0" target="_blank">arisnow0</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-card">
+                        <div class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="social-info">
+                            <div class="social-name">YouTube (основной)</div>
+                            <div class="social-link">
+                                <a href="https://www.youtube.com/@ArisNow0" target="_blank">ArisNow0</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-card">
+                        <div class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="social-info">
+                            <div class="social-name">YouTube (второй)</div>
+                            <div class="social-link">
+                                <a href="https://www.youtube.com/@CatBiosStudio" target="_blank">CatBios Studio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3-delaunay@6"></script>
+    <script type="module" src="js/contact.js"></script>
+    <script src="js/contact_lang.js"></script>
+</body>
+
+</html>

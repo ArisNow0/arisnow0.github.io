@@ -128,7 +128,7 @@ function setLanguage(lang) {
     document.title = translations[lang].title;
     document.querySelector('a.tab[href="index.html"]').textContent = t.nav.home;
     document.querySelector('a.tab[href="portfolio.html"]').textContent = t.nav.portfolio;
-    document.querySelector('a.tab[href="#"]').textContent = t.nav.contacts;
+    document.querySelector('a.tab[href="contact.html"]').textContent = t.nav.contacts;
 
     document.querySelectorAll('.text-card-button').forEach(btn => btn.textContent = t.buttons.more);
     document.getElementById('modal-link').textContent = t.buttons.visitSite;
