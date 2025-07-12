@@ -338,20 +338,27 @@ body {
 }
 
 .flags {
-    position: absolute;
-    top: 60px;
-    left: -4px;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
+    pointer-events: auto;
+    position: fixed;
+    top: 85px;
+    right: 10px;
+    z-index: 9999;
     display: none;
     flex-direction: column;
     gap: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background: #adafff29;
+    border: 1px solid #ffffff52;
+    box-shadow:
+        9px 3px 4px rgba(0, 0, 0, 0.158),
+        -9px -19px 14px rgba(0, 0, 0, 0.089),
+        inset 0px 0px 12px rgba(255, 255, 255, 0.48),
+        inset -17px -17px 5px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1.5px);
     overflow: hidden;
-    z-index: 9999;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+
 
 .flags.active {
     display: flex;

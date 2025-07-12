@@ -10,38 +10,56 @@ window.addEventListener('resize', () => {
 });
 resizeCanvas();
 
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.classList.remove('hidden');
+    requestAnimationFrame(() => {
+        modal.classList.add('show');
+    });
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.classList.add('hidden');
+    }, 300);
+}
+
 document.querySelectorAll('.card-button').forEach(button => {
     button.addEventListener('click', () => {
         const card = button.closest('.portfolio-card');
 
         if (card.id === 'Animation') {
-            document.getElementById('animation-modal').classList.remove('hidden');
             document.getElementById('modal-titleAn').textContent = card.dataset.title;
             document.getElementById('modal-descriptionAn').textContent = card.dataset.description;
+            openModal('animation-modal');
         } else {
             document.getElementById('modal-title').textContent = card.dataset.title;
             document.getElementById('modal-description').textContent = card.dataset.description;
             document.getElementById('modal-tools').textContent = card.dataset.tools;
             document.getElementById('modal-link').href = card.dataset.link;
-            document.getElementById('glass-panel').classList.remove('hidden');
+            openModal('glass-panel');
         }
     });
 });
 
 document.querySelectorAll('.close-button').forEach(button => {
     button.addEventListener('click', () => {
-        document.getElementById('glass-panel').classList.add('hidden');
-        document.getElementById('animation-modal').classList.add('hidden');
+        closeModal('glass-panel');
+        closeModal('animation-modal');
     });
 });
 
 document.querySelectorAll('.glass-modal').forEach(modal => {
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
-            modal.classList.add('hidden');
+            closeModal('glass-panel');
+            closeModal('animation-modal');
         }
     });
 });
+
 
 
 class Particle {

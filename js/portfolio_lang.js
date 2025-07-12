@@ -133,7 +133,7 @@ function setLanguage(lang) {
     document.querySelectorAll('.text-card-button').forEach(btn => btn.textContent = t.buttons.more);
     document.getElementById('modal-link').textContent = t.buttons.visitSite;
     document.querySelectorAll('.close-button').forEach(btn => btn.textContent = t.buttons.close);
-    document.querySelector('.visit-button[href*="animations"]').textContent = t.buttons.seeAll;
+    document.querySelector('.visit-button[href*="AnimationsAndModels.html"]').textContent = t.buttons.seeAll;
 
     document.getElementById('modal-tools').previousElementSibling.textContent = t.modal.usedTech;
 

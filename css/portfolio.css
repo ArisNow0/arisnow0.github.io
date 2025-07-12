@@ -29,15 +29,10 @@ body {
 
 .header {
     position: fixed;
-    /* фиксируем сверху */
     top: 0;
-    /* прижимаем к верхнему краю */
     left: 0;
     width: 100%;
-    /* 100% ширины */
     z-index: 999;
-    /* поверх других элементов */
-
     background: rgba(255, 255, 255, 0.068);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(1.5px);
@@ -103,11 +98,18 @@ body {
 }
 
 .flags {
+    pointer-events: auto;
+    box-shadow:
+        9px 3px 4px rgba(0, 0, 0, 0.158),
+        -9px -19px 14px rgba(0, 0, 0, 0.089),
+        inset 0px 0px 12px rgba(255, 255, 255, 0.48),
+        inset -17px -17px 5px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1.5px);
     position: absolute;
-    top: 60px;
-    left: -4px;
-    background: white;
-    border: 1px solid #ccc;
+    top: 67px;
+    left: -5px;
+    background: #adafff29;
+    border: 1px solid #ffffff52;
     border-radius: 5px;
     padding: 5px;
     display: none;
@@ -115,7 +117,6 @@ body {
     gap: 5px;
     overflow: hidden;
     z-index: 9999;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .flags.active {
@@ -348,7 +349,6 @@ body {
 }
 
 .visit-button {
-    pointer-events: auto;
     height: 100%;
     color: #ffffff;
     padding: 10px 20px;
@@ -364,7 +364,6 @@ body {
 }
 
 .close-button {
-    pointer-events: auto;
     height: 100%;
     color: #ffffff;
     padding: 10px 20px;
@@ -414,6 +413,39 @@ body {
 
 .modal-content a {
     text-decoration: none;
+}
+
+.glass-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.glass-modal.show {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 

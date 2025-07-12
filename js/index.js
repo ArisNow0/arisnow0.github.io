@@ -15,7 +15,7 @@ function initBlackHole() {
           }
         `;
 
-    const fsSource = `
+const fsSource = `
 precision mediump float;
 uniform float t;
 uniform vec2 r;
@@ -38,24 +38,22 @@ void main() {
   vec2 uv = gl_FragCoord.xy / r;
   vec2 p_img = (gl_FragCoord.xy * 2.0 - r) / r.y * mat2(1.0, -1.0, 1.0, 1.0);
 
+  vec2 center = r * 0.5;
+  vec2 toUV = gl_FragCoord.xy - center;
 
-vec2 center = r * 0.5;
-vec2 toUV = gl_FragCoord.xy - center;
+  float angle = -0.05 * t;
+  mat2 rotation = mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
+  vec2 rotated = rotation * toUV + center;
 
-float angle = -0.05 * t;
-mat2 rotation = mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
-vec2 rotated = rotation * toUV + center;
+  vec2 starCell = floor(rotated / 20.0);
+  vec2 local = mod(rotated, 20.0) - 10.0;
 
-vec2 starCell = floor(rotated / 20.0);
-vec2 local = mod(rotated, 20.0) - 10.0;
-
-float starSeed = hash(starCell);
-if (starSeed > 0.996) {
-  float d = length(local) / 3.0;
-  float intensity = smoothstep(1.0, 0.0, d); 
-  o_stars = vec4(vec3(intensity), 1.0);
-}
-
+  float starSeed = hash(starCell);
+  if (starSeed > 0.996) {
+    float d = length(local) / 3.0;
+    float intensity = smoothstep(1.0, 0.0, d);
+    o_stars = vec4(vec3(intensity), 1.0);
+  }
 
   vec2 l_val = myTanh(p_img * 5.0 + 2.0);
   l_val = min(l_val, l_val * 3.0);
@@ -89,6 +87,7 @@ if (starSeed > 0.996) {
   vec4 finalColor = clamp(o_stars + mix(o_bg, o_anim, 0.5) * 1.5, 0.0, 1.0);
   gl_FragColor = finalColor;
 }`;
+
 
     function createShader(gl, type, source) {
         const shader = gl.createShader(type);
@@ -319,7 +318,6 @@ function initGlass() {
             setTimeout(() => animating = false, 10);
         }
     }
-    // Анимка
     const card1 = document.getElementById('card1');
     const card2 = document.getElementById('card2');
     const card3 = document.getElementById('card3');
@@ -371,7 +369,6 @@ function initGlass() {
     let scrollSteps = 0;
     const maxSteps = 7;
     let lastScrollTime = 0;
-    // Кручения колесика мыши
     window.addEventListener('wheel', e => {
         const now = Date.now();
         if (now - lastScrollTime < 150) return;
