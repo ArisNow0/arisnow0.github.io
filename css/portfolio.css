@@ -466,7 +466,9 @@ body {
         display: flex;
     }
 }
-
+.card-overlay img{
+    margin-left: 5px;width: 370px;
+}
 @media (max-width: 425px) {
     .body {
         overflow: scroll;
@@ -478,6 +480,9 @@ body {
 
     .modal-content h2 {
         font-size: 2.8vb;
+    }
+    .card-overlay img{
+     width: 200px;
     }
 
     .card-button {
