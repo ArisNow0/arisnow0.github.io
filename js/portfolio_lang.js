@@ -30,9 +30,14 @@ const translations = {
                 tools: "HTML, CSS, JavaScript, FontAwesome service"
             },
             {
-                title: "Pardon Tools",
+                title: "PardonTools",
                 description: "Open-source app with many useful features like file comparison, value editing, and renaming in files. A dedicated website was also created for it.",
                 tools: "C#, HTML, CSS, JavaScript"
+            },
+            {
+                title: "BreakingNews",
+                description: "Online news website with ads, filters, search, Supabase integration and an admin panel for content management.",
+                tools: "HTML, CSS, JavaScript"
             }
         ]
     },
@@ -67,9 +72,14 @@ const translations = {
                 tools: "HTML, CSS, JavaScript, Сервис FontAwesome"
             },
             {
-                title: "Pardon Tools",
+                title: "PardonTools",
                 description: "Программа с открытым исходным кодом, включающая множество полезных функций, таких как сравнение файлов, изменение значений в приложениях, а также замена названий в определённых файлах. Для программы также разработан собственный веб-сайт, доступный для пользователей.",
                 tools: "C#, HTML, CSS, JavaScript"
+            },
+            {
+                title: "БрекингNews",
+                description: "Онлайн-сайт новостей с рекламой, фильтрами, поиском, интеграцией Supabase и админ-панелью для управления контентом.",
+                tools: "HTML, CSS, JavaScript"
             }
         ]
     },
@@ -104,9 +114,14 @@ const translations = {
                 tools: "HTML, CSS, JavaScript, Сервіс FontAwesome"
             },
             {
-                title: "Pardon Tools",
+                title: "PardonTools",
                 description: "Програма з відкритим кодом, яка має безліч корисних функцій: порівняння файлів, редагування значень у додатках, перейменування файлів. Також створено окремий вебсайт для програми.",
                 tools: "C#, HTML, CSS, JavaScript"
+            },
+            {
+                title: "БрекингNews",
+                description: "Онлайн-сайт новин з рекламою, фільтрами, пошуком, інтеграцією Supabase та адмін-панеллю для керування контентом.",
+                tools: "HTML, CSS, JavaScript"
             }
         ]
     }
