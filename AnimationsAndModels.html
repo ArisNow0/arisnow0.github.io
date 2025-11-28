@@ -135,6 +135,12 @@
             height: auto;
             border: 1px solid #3a2a1a;
             filter: sepia(0.4) contrast(0.9) brightness(0.8);
+            transition: filter 0.3s;
+        }
+
+        .media-item:hover img,
+        .media-item:hover video {
+            filter: sepia(0) contrast(1) brightness(1);
         }
 
         .media-item p {
@@ -365,7 +371,7 @@
             <div class="media-item">
                 <video controls>
                     <source src="image/Animation/Gallery/7.mp4" type="video/mp4">
-                    Ваш браузер не поддерживает видео.
+                    Your browser does not support the video.
                 </video>
                 <p>My Brain</p>
             </div>
@@ -378,7 +384,7 @@
             <div class="media-item">
                 <video controls>
                     <source src="image/Animation/Gallery/10.mp4" type="video/mp4">
-                    Ваш браузер не поддерживает видео.
+                    Your browser does not support the video.
                 </video>
                 <p>Nintendo Game Boy</p>
             </div>
@@ -386,7 +392,7 @@
             <div class="media-item">
                 <video controls>
                     <source src="image/Animation/Gallery/9.mp4" type="video/mp4">
-                    Ваш браузер не поддерживает видео.
+                    Your browser does not support the video.
                 </video>
                 <p>Looping Animation</p>
             </div>
@@ -395,6 +401,33 @@
                 <img src="/image/Animation/Gallery/12.jpg" alt="Выцветший снимок">
                 <p>Another one of my models</p>
             </div>
+
+            <div class="media-item">
+                <img src="/image/Animation/Gallery/14.jpg" alt="Выцветший снимок">
+                <p>Made a thumbnail for a YouTube video №1.</p>
+            </div>
+
+            <div class="media-item">
+                <img src="/image/Animation/Gallery/15.jpg" alt="Выцветший снимок">
+                <p>Made a thumbnail for a YouTube video №2. </p>
+            </div>
+
+            <div class="media-item">
+                <video controls>
+                    <source src="image/Animation/Gallery/16.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <p>Titan submarine</p>
+            </div>
+
+            <div class="media-item">
+                <video controls>
+                    <source src="image/Animation/Gallery/13.mp4" type="video/mp4">
+                    Your browser does not support the video.
+                </video>
+                <p>3D Character</p>
+            </div>
+
         </div>
         <div class="more">
             <h1>More</h1>
