@@ -41,48 +41,6 @@ const translations = {
             }
         ]
     },
-    ru: {
-        title: "ArisNow | Портфолио",
-        nav: {
-            home: "Главная",
-            portfolio: "Портфолио",
-            contacts: "Контакты"
-        },
-        buttons: {
-            more: "Подробнее",
-            seeAll: "Увидеть Всё",
-            visitSite: "Перейти на сайт",
-            close: "Закрыть"
-        },
-        modal: {
-            usedTech: "Используемые технологии:"
-        },
-        card: [{
-                title: "3D Модели и Анимации",
-                description: "Здесь собраны мои работы с 3D-моделями, анимациями и визуализацией."
-            },
-            {
-                title: "GadgetSale",
-                description: "Онлайн-магазин был разработан за два месяца. В нем реализованы функции онлайн-оплаты через сервис Wayforpay, отображение актуального количества товаров в реальном времени, а также интеграция карты для выбора отделения почты при оформлении заказа. После оформления заказ автоматически отправлялся на электронную почту покупателя и магазина для дальнейшей обработки и отправки товара.",
-                tools: "HTML, CSS, JavaScript, PHP, Сервис Leaflet, Сервис Wayforpay"
-            },
-            {
-                title: "ShellChain",
-                description: "Сайт для Minecraft-сервера был разработан за три недели. Он включает в себя ряд визуально привлекательных элементов, таких как таймлайн, раздел с часто задаваемыми вопросами, а также переключатель светлой и тёмной темы.",
-                tools: "HTML, CSS, JavaScript, Сервис FontAwesome"
-            },
-            {
-                title: "PardonTools",
-                description: "Программа с открытым исходным кодом, включающая множество полезных функций, таких как сравнение файлов, изменение значений в приложениях, а также замена названий в определённых файлах. Для программы также разработан собственный веб-сайт, доступный для пользователей.",
-                tools: "C#, HTML, CSS, JavaScript"
-            },
-            {
-                title: "БрекингNews",
-                description: "Онлайн-сайт новостей с рекламой, фильтрами, поиском, интеграцией Supabase и админ-панелью для управления контентом.",
-                tools: "HTML, CSS, JavaScript"
-            }
-        ]
-    },
     ua: {
         title: "ArisNow | Портфоліо",
         nav: {
@@ -112,16 +70,6 @@ const translations = {
                 title: "ShellChain",
                 description: "Сайт для Minecraft-сервера, створений за три тижні. Включає таймлайн, FAQ та перемикач світлої/темної теми.",
                 tools: "HTML, CSS, JavaScript, Сервіс FontAwesome"
-            },
-            {
-                title: "PardonTools",
-                description: "Програма з відкритим кодом, яка має безліч корисних функцій: порівняння файлів, редагування значень у додатках, перейменування файлів. Також створено окремий вебсайт для програми.",
-                tools: "C#, HTML, CSS, JavaScript"
-            },
-            {
-                title: "БрекингNews",
-                description: "Онлайн-сайт новин з рекламою, фільтрами, пошуком, інтеграцією Supabase та адмін-панеллю для керування контентом.",
-                tools: "HTML, CSS, JavaScript"
             }
         ]
     }
@@ -131,8 +79,7 @@ function setLanguage(lang) {
     const t = translations[lang];
 
     const flagUrls = {
-        en: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Flag_of_the_United_States_%28Pantone%29.svg",
-        ru: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png",
+        en: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_the_United_States_%2851_stars%29.svg/330px-Flag_of_the_United_States_%2851_stars%29.svg.png",
         ua: "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg"
     };
     const currentFlagImg = document.querySelector("#current-flag img");
@@ -180,11 +127,12 @@ function loadLanguage() {
     let savedLang = localStorage.getItem("language");
 
     if (savedLang) {
+        if (savedLang === "ru") savedLang = "en";
         setLanguage(savedLang);
     } else {
         const systemLang = navigator.language.slice(0, 2);
 
-        const supportedLangs = ["en", "ru", "ua"];
+        const supportedLangs = ["en", "ua"];
 
         let selectedLang = systemLang === "uk" ? "ua" : systemLang;
 

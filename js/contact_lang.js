@@ -30,37 +30,6 @@ const translations = {
             youtubeSecond: "YouTube (Second)"
         }
     },
-    ru: {
-        title: "ArisNow | Контакты",
-        nav: {
-            home: "Главная",
-            portfolio: "Портфолио",
-            contacts: "Контакты"
-        },
-        header: {
-            heading: "ArisNow",
-            sub: "Свяжитесь со мной удобным способом"
-        },
-        sections: {
-            contactTitle: "Контакты",
-            socialTitle: "Социальные сети"
-        },
-        contact: {
-            phone: "Телефон",
-            phoneNote: "Лучше писать в Telegram",
-            email: "Email",
-            telegram: "Telegram",
-            discord: "Discord"
-        },
-        socials: {
-            steam: "Steam",
-            tgChannel: "Telegram канал",
-            github: "GitHub",
-            twitch: "Twitch",
-            youtubeMain: "YouTube (основной)",
-            youtubeSecond: "YouTube (второй)"
-        }
-    },
     ua: {
         title: "ArisNow | Контакти",
         nav: {
@@ -99,7 +68,6 @@ function setLanguage(lang) {
 
     const flagUrls = {
         en: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Flag_of_the_United_States_%28Pantone%29.svg",
-        ru: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png",
         ua: "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg"
     };
     const currentFlagImg = document.querySelector("#current-flag img");
@@ -144,11 +112,12 @@ function loadLanguage() {
     let savedLang = localStorage.getItem("language");
 
     if (savedLang) {
+        if (savedLang === "ru") savedLang = "en";
         setLanguage(savedLang);
     } else {
         const systemLang = navigator.language.slice(0, 2);
 
-        const supportedLangs = ["en", "ru", "ua"];
+        const supportedLangs = ["en", "ua"];
 
         let selectedLang = systemLang === "uk" ? "ua" : systemLang;
 

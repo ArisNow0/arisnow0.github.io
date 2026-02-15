@@ -222,11 +222,15 @@ body {
 
 .card-title {
     font-family: "IBM Plex Sans", sans-serif;
-    text-shadow:
-        -2px -2px 0 rgba(0, 0, 0, 0.4),
-        2px -2px 0 rgba(0, 0, 0, 0.4),
-        -2px 2px 0 rgba(0, 0, 0, 0.4),
-        2px 2px 0 rgba(0, 0, 0, 0.4);
+  text-shadow:
+    -2px 0 black,
+    2px 0 black,
+    0 -2px black,
+    0 2px black,
+    -2px -2px black,
+    2px -2px black,
+    -2px 2px black,
+    2px 2px black;
     font-size: 6.5vb;
     font-weight: 600;
     padding: 4px 8px;

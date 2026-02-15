@@ -1,28 +1,4 @@
 const translations = {
-    ru: {
-        title: "ArisNow | Главная",
-        home: "Главная",
-        portfolio: "Портфолио",
-        contact: "Контакты",
-        name: "ArisNow0",
-        description: [
-            "Я fullstack разработчик с опытом работы в различных областях программирования. Основатель студии CatBios. Работаю с C++, Java, JavaScript, Python и веб-технологиями.",
-            "Параллельно занимаюсь 3D графикой в Blender. Люблю сложные технические задачи и творческие проекты.",
-            "Готов взяться за любой проект - от сложных систем до простых скриптов. Если идея интересная, то я уже с вами."
-        ],
-        skills: {
-            programming: "Кодинг",
-            graphics: {
-                title: "3D Графика",
-                Modeling: "Моделирование",
-                Animation: "Анимация",
-                Texturing: "Текстурирование"
-            },
-            tools: "Инструменты",
-            web: "Веб-разработка"
-        },
-        scroll: "Прокрутите вниз"
-    },
     en: {
         title: "ArisNow | Main",
         home: "Main",
@@ -77,8 +53,7 @@ function setLanguage(lang) {
     const t = translations[lang];
 
     const flagUrls = {
-        en: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Flag_of_the_United_States_%28Pantone%29.svg",
-        ru: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png",
+        en: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_the_United_States_%2851_stars%29.svg/330px-Flag_of_the_United_States_%2851_stars%29.svg.png",
         ua: "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg"
     };
     const currentFlagImg = document.querySelector("#current-flag img");
@@ -126,11 +101,12 @@ function loadLanguage() {
     let savedLang = localStorage.getItem("language");
 
     if (savedLang) {
+        if (savedLang === "ru") savedLang = "en";
         setLanguage(savedLang);
     } else {
         const systemLang = navigator.language.slice(0, 2);
 
-        const supportedLangs = ["en", "ru", "ua"];
+        const supportedLangs = ["en", "ua"];
 
         let selectedLang = systemLang === "uk" ? "ua" : systemLang;
 
