@@ -1,13 +1,13 @@
 const translations = {
     en: {
-        title: "ArisNow | Contact",
+        title: "ArisNow0 | Contact",
         nav: {
             home: "Main",
             portfolio: "Portfolio",
             contacts: "Contact"
         },
         header: {
-            heading: "ArisNow",
+            heading: "ArisNow0",
             sub: "Contact me in any convenient way"
         },
         sections: {
@@ -31,14 +31,14 @@ const translations = {
         }
     },
     ua: {
-        title: "ArisNow | Контакти",
+        title: "ArisNow0 | Контакти",
         nav: {
             home: "Головна",
             portfolio: "Портфоліо",
             contacts: "Контакти"
         },
         header: {
-            heading: "ArisNow",
+            heading: "ArisNow0",
             sub: "Зв’яжіться зі мною зручним способом"
         },
         sections: {

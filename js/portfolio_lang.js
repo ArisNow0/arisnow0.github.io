@@ -1,6 +1,6 @@
 const translations = {
     en: {
-        title: "ArisNow | Portfolio",
+        title: "ArisNow0 | Portfolio",
         nav: {
             home: "Main",
             portfolio: "Portfolio",
@@ -42,7 +42,7 @@ const translations = {
         ]
     },
     ua: {
-        title: "ArisNow | Портфоліо",
+        title: "ArisNow0 | Портфоліо",
         nav: {
             home: "Головна",
             portfolio: "Портфоліо",

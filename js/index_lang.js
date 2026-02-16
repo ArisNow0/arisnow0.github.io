@@ -1,14 +1,14 @@
 const translations = {
     en: {
-        title: "ArisNow | Main",
+        title: "ArisNow0 | Main",
         home: "Main",
         portfolio: "Portfolio",
         contact: "Contact",
         name: "ArisNow0",
         description: [
-            "I'm a fullstack developer with experience in various programming areas. Founder of CatBios studio. I work with C++, Java, JavaScript, Python, and web technologies.",
-            "In parallel, I work with 3D graphics in Blender. I love complex technical challenges and creative projects.",
-            "I'm ready to take on any project — from complex systems to simple scripts. If the idea is interesting, I'm in."
+            "Hi, I am a developer/programmer. I mainly work on websites, but I can also do other things.",
+            "I also work with 3D graphics in Blender and make my own games for mobile phones.",
+            "I mainly work with C++, Java, JavaScript, and Python."
         ],
         skills: {
             programming: "Programming",
@@ -24,15 +24,15 @@ const translations = {
         scroll: "Scroll down"
     },
     ua: {
-        title: "ArisNow | Головна",
+        title: "ArisNow0 | Головна",
         home: "Головна",
         portfolio: "Портфоліо",
         contact: "Контакти",
         name: "ArisNow0",
         description: [
-            "Я fullstack розробник з досвідом у різних галузях програмування. Засновник студії CatBios. Працюю з C++, Java, JavaScript, Python та веб-технологіями.",
-            "Паралельно займаюся 3D графікою в Blender. Люблю складні технічні завдання та творчі проекти.",
-            "Готовий взятися за будь-який проєкт — від складних систем до простих скриптів. Якщо ідея цікава — я з вами."
+            "Привіт, я розробник/програміст. Я займаюся в основному сайтами, але також можу робити щось інше.",
+            "Також займаюся 3D графікою в Blender і створюю свої ігри для телефонів.",
+            "Я працюю з C++, Java, JavaScript і Python в основному."
         ],
         skills: {
             programming: "Кодування",
