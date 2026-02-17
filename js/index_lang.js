@@ -7,13 +7,14 @@ const translations = {
         name: "ArisNow0",
         description: [
             "Hi, I am a developer/programmer. I mainly work on websites, but I can also do other things.",
-            "I also work with 3D graphics in Blender and make my own games for mobile phones.",
+            "I also work with 3D graphics in Blender and Autodesk Fusion, also make my own games for mobile phones.",
             "I mainly work with C++, Java, JavaScript, and Python."
         ],
         skills: {
             programming: "Programming",
             graphics: {
                 title: "3D Graphics",
+                Engineering: "Engineering",
                 Modeling: "Modeling",
                 Animation: "Animation",
                 Texturing: "Texturing"
@@ -31,13 +32,14 @@ const translations = {
         name: "ArisNow0",
         description: [
             "Привіт, я розробник/програміст. Я займаюся в основному сайтами, але також можу робити щось інше.",
-            "Також займаюся 3D графікою в Blender і створюю свої ігри для телефонів.",
+            "Також займаюся 3D графікою в Blender і Autodesk Fusion, також створюю свої ігри для телефонів.",
             "Я працюю з C++, Java, JavaScript і Python в основному."
         ],
         skills: {
             programming: "Кодування",
             graphics: {
                 title: "3D Графіка",
+                Engineering: "Проектирование",
                 Modeling: "Моделювання",
                 Animation: "Анімація",
                 Texturing: "Текстурування"
@@ -80,7 +82,7 @@ function setLanguage(lang) {
     document.querySelector("#card2 h3").textContent = t.skills.graphics.title;
     const listItems = document.querySelectorAll("#card2 li");
 
-    listItems[1].textContent = t.skills.graphics.Modeling;
+    listItems[0].textContent = t.skills.graphics.Engineering;
     listItems[2].textContent = t.skills.graphics.Animation;
     listItems[3].textContent = t.skills.graphics.Texturing;
 
