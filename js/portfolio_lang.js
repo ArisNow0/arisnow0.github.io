@@ -20,24 +20,19 @@ const translations = {
                 description: "Here are my works with 3D models, animations and visualization."
             },
             {
-                title: "GadgetSale",
+                title: "FatTruck",
+                description: "A street food truck website for a Dnipro-based business, developed for my portfolio. It features an interactive route map with a stop timeline, a special deals section, and a dynamic design utilizing video backgrounds.",
+                tools: "HTML, CSS, JavaScript, FontAwesome, Leaflet"
+            },
+            {
+                title: "GadgetSale ",
                 description: "Online store developed in two months. It features online payment via Wayforpay, real-time product stock display, and map integration to select a postal office. After ordering, a confirmation is automatically sent to both the customer and the store email.",
                 tools: "HTML, CSS, JavaScript, PHP, Leaflet service, Wayforpay service"
             },
             {
-                title: "ShellChain",
+                title: "ShellChain ",
                 description: "Website for a Minecraft server created in three weeks. Includes visually appealing elements such as a timeline, FAQ section, and light/dark theme toggle.",
                 tools: "HTML, CSS, JavaScript, FontAwesome service"
-            },
-            {
-                title: "PardonTools",
-                description: "Open-source app with many useful features like file comparison, value editing, and renaming in files. A dedicated website was also created for it.",
-                tools: "C#, HTML, CSS, JavaScript"
-            },
-            {
-                title: "BreakingNews",
-                description: "Online news website with ads, filters, search, Supabase integration and an admin panel for content management.",
-                tools: "HTML, CSS, JavaScript"
             }
         ]
     },
@@ -62,14 +57,19 @@ const translations = {
                 description: "Тут зібрані мої роботи з 3D-моделями, анімаціями та візуалізацією."
             },
             {
+                title: "FatTruck",
+                description: "Сайт для фудтраку вуличної їжі у Дніпрі, створений для портфоліо. Містить інтерактивну карту маршруту з таймлайном зупинок, блок зі спеціальними пропозиціями та динамічний дизайн з використанням відео-фонів.",
+                tools: "HTML, CSS, JavaScript, FontAwesome, Leaflet"
+            },
+            {
                 title: "GadgetSale",
                 description: "Інтернет-магазин створено за два місяці. Має функцію онлайн-оплати через Wayforpay, відображення наявності товарів у реальному часі та інтеграцію карти для вибору відділення пошти. Після замовлення лист автоматично надсилається на пошту покупця та магазину.",
-                tools: "HTML, CSS, JavaScript, PHP, Сервіс Leaflet, Сервіс Wayforpay"
+                tools: "HTML, CSS, JavaScript, PHP, Leaflet, Wayforpay"
             },
             {
                 title: "ShellChain",
                 description: "Сайт для Minecraft-сервера, створений за три тижні. Включає таймлайн, FAQ та перемикач світлої/темної теми.",
-                tools: "HTML, CSS, JavaScript, Сервіс FontAwesome"
+                tools: "HTML, CSS, JavaScript, FontAwesome"
             }
         ]
     }
